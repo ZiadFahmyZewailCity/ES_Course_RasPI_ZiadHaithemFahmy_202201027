@@ -1,8 +1,9 @@
-Videos for question 1 (LED Blinking)
+Link Question 1 (Videos)
 https://drive.google.com/drive/folders/1E8fEz0wyV6qx2h4CBTZ7L3WlcVg_aLIl?usp=drive_link
-
-Videos for question 3 (Static IP)
+Link Question 2&3 (Videos)
 https://drive.google.com/drive/folders/1Q1YxbnGpoCY9KLIz5ws0F5CYoRZH-AZA?usp=drive_link
+Link Answering questions in document
+https://drive.google.com/drive/folders/1b8pcLPxKxorsusDOLc5V2x9V8HGJFlP6?usp=drive_link
 
 - Questions: 
 1) Which gpiochip did you use and why? How did you calculate the GPIO number? 
@@ -13,7 +14,7 @@ base = 512
 pinNumber = base + pin_Number
 
 when you write into the export file your pin number, a directory for that pin is generated which contains the files for the direction, the value of the pin
-edge detection etc. By writing to the files in this created directory you can interface control them
+edge detection etc. By writing to the files in this created directory you can interface control the gpio pins
 
 2) How does Linux represent hardware using /sys? How did you enable SSH? What is 
 required for a successful SSH connection? 
