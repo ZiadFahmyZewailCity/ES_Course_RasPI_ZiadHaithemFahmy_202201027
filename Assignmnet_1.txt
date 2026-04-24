@@ -1,0 +1,29 @@
+Videos for question 1 (LED Blinking)
+https://drive.google.com/drive/folders/1E8fEz0wyV6qx2h4CBTZ7L3WlcVg_aLIl?usp=drive_link
+
+Videos for question 3 (Static IP)
+https://drive.google.com/drive/folders/1Q1YxbnGpoCY9KLIz5ws0F5CYoRZH-AZA?usp=drive_link
+
+- Questions: 
+1) Which gpiochip did you use and why? How did you calculate the GPIO number? 
+What changes occur in /sys/class/gpio/ after exporting the pin? 
+
+gpiochip512 is the chip i chose as it contains the BCM2835 driver, which handles the GPIO pins
+base = 512
+pinNumber = base + pin_Number
+
+when you write into the export file your pin number, a directory for that pin is generated which contains the files for the direction, the value of the pin
+edge detection etc. By writing to the files in this created directory you can interface control them
+
+2) How does Linux represent hardware using /sys? How did you enable SSH? What is 
+required for a successful SSH connection? 
+
+instead of interacting direcly with registers, you can interact with the hardware using /sys
+This is a directory which contains all the files you need to manipulate the hardware 
+By writing into these files you can configure the hardware as you need 
+
+i enabled SSH using sudo raspi-config and going to interfacing options and enabling ssh
+Once that was done i connected the raspi to my mobile hotspot and then sshed into the raspi 
+through by writing ssh ziad@10.31.65.50 (User@RaspiIP) into my laptop running WSL which was connected to the
+same mobile hotspot. They have to be connected on the same hotspot as both devices need to be on the same
+subnet since they have no way to route to another network which contains the device
